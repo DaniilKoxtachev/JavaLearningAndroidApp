@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_item_OOP_1">
+      <![CDATA[  no code]]>
+    </string>
+    <string name="code_item_OOP_2">
+      <![CDATA[  no code]]>
+    </string>
+    <string name="code_item_OOP_3">
+     <![CDATA[    public class SomePhone {
+
+    private int year;<br>
+    private String company;<br>
+    public SomePhone(int year, String company) {<br>
+        this.year = year;<br>
+        this.company = company;<br>
+    }<br><br>
+    private void openConnection(){<br>
+        //findComutator<br>
+        //openNewConnection…<br>
+    }<br><br>
+    public void call() {<br>
+        openConnection();<br>
+        System.out.println("Вызываю номер");<br>
+    }<br>
+<br>
+    public void ring() {<br>
+        System.out.println("Дзынь-дзынь");<br>
+    }<br><br>
+
+}]]>
+    </string>
+    <string name="code_item_OOP_4">
+        <![CDATA[ public abstract class WirelessPhone extends AbstractPhone {<br>
+
+            private int hour;<br><br>
+
+            public WirelessPhone(int year, int hour) {<br>
+                super(year);<br>
+                this.hour = hour;<br>
+            }<br><br>
+        }]]>
+    </string>
+
+    <string name="code_item_OOP_5">
+public class Phone extends AbstractPhone {
+
+  <![CDATA[  public Phone(int year) {<br>
+        super(year);<br>
+    }<br><br>
+
+    @Override<br>
+    public void call(int outputNumber) {<br>
+        System.out.println("Вызываю номер" + outputNumber);<br>
+    }<br><br>
+
+    @Override<br>
+    public void ring(int inputNumber) {<br>
+        System.out.println("Телефон звонит");<br>
+    }<br><br>
+}]]>
+    </string>
+    <string name="code_item_OOP_6">
+   <![CDATA[     // Abstract class<br>
+abstract class Animal {<br>
+    // Abstract method (does not have a body)<br>
+    public abstract void animalSound();<br>
+<br><br>
+    // Regular method<br>
+    public void sleep() {<br>
+        System.out.println("Zzz");<br>
+    }<br>
+}<br><br>
+
+// Subclass (inherit from Animal)<br>
+class Pig extends Animal {<br>
+    public void animalSound() {<br>
+        // The body of animalSound() is provided here<br>
+        System.out.println("The pig says: wee wee");<br>
+    }<br>
+}
+<br><br>
+class MyMainClass {<br>
+    public static void main(String[] args) {<br>
+        Pig myPig = new Pig(); // Create a Pig object<br>
+        myPig.animalSound();<br>
+        myPig.sleep();<br>
+    }<br>
+}]]>
+    </string>
+    <string name="code_item_OOP_7">
+      <![CDATA[  no code ]]>
+    </string>
+    <string name="code_item_OOP_8">
+     <![CDATA[   no code ]]>
+    </string>
+    <string name="code_item_OOP_9">
+     <![CDATA[   no code ]]>
+    </string>
+</resources>

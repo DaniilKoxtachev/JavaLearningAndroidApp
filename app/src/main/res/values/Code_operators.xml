@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_oper_1">
+      <![CDATA[  int a = 4;<br>
+        int b = 5;<br>
+        boolean result;<br>
+        //a равно b - false<br>
+        result = a == b <br><br>
+        //a не равно b - true<br>
+        result = a != b <br><br>
+        //a больше b - false<br>
+        result = a > b; <br><br>
+        //b больше или равно 6 - false<br>
+        result = b >= 6 <br><br>
+        //логическое нет - false<br>
+        result = !result ]]>
+    </string>
+    <string name="code_oper_2">
+        <![CDATA[ String str1 = new String("Привет");<br>
+        String str2 = new String("Привет");<br>
+        String sameStr = str1;<br><br>
+        // b1 - false, потому что str1 и str2 это 2 разных объекта<br>
+        boolean b1 = str1 == str2; <br><br>
+         // b2 - true, потому что str1 и str2 логически эквивалентны<br>
+        boolean b2 = str1.equals(str2);<br><br>
+        // b3 -true, потому что str1 и sameStr в действительности один и тот же объект<br>
+        boolean b3 = str1 == sameStr;<br><br> ]]>
+    </string>
+    <string name="code_oper_3">
+      <![CDATA[   if (a == b) {<br>
+        //Если a равно b - выводим сообщение<br>
+         System.out.println("a и b равны!");<br>
+        }]]>
+    </string>
+    <string name="code_oper_4">
+      <![CDATA[   if (a == b) {<br>
+            //Если a равно b - выводим сообщение<br>
+            System.out.println("a и b равны!");<br>
+        }<br>
+        else{<br>
+            //Если a не равно b - выводим сообщение<br>
+            System.out.println("a и b не равны!");<br>
+        }]]>
+    </string>
+    <string name="code_oper_5">
+    <![CDATA[ int day = 3;<br>
+    String dayString;<br>
+    switch (day) {<br>
+        case 1:  dayString = "Понедельник";<br>
+                 break;<br><br>
+        case 2:  dayString = "Вторник";<br>
+                 break;<br><br>
+        case 3:  dayString = "Среда";<br>
+                 break;<br><br>
+        case 4:  dayString = "Четверг";<br>
+                 break;<br><br>
+        case 5:  dayString = "Пятница";<br>
+                 break;<br><br>
+        case 6:  dayString = "Суббота";<br>
+                 break;<br><br>
+        case 7:  dayString = "Воскресенье";<br>
+                 break;<br><br>
+        default: dayString = "Ошибка";<br>
+                 break;<br><br>
+    }<br>
+    System.out.print(dayString);<br>]]>
+    </string>
+</resources>

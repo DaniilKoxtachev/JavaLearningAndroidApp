@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="code_perem_1">
+       <![CDATA[ int x = 1;<br>
+        int y = 2;]]>
+    </string>
+
+    <string name="code_perem_2">
+       <![CDATA[static final int NUMBER_OF_HOURS_IN_A_DAY = 24]]>
+    </string>
+
+    <string name="code_perem_3">
+          <![CDATA[Сat ourcat = new Cat();]]>
+    </string>
+
+    <string name="code_perem_4">
+         <![CDATA[ //объявление переменных типа byte.<br>
+         byte getByte,putByte;<br><br>
+         // инициализация переменных<br>
+         getByte = 0;<br>
+         putByte = 0;]]>
+    </string>
+
+    <string name="code_perem_5">
+        <![CDATA[ //объявление и инициализация переменной типа short.<br>
+         short employeeID = 0;]]>
+    </string>
+
+    <string name="code_perem_6">
+       <![CDATA[ //объявление и инициализация переменной типа int.<br>
+        int max = 2147483647;]]>
+    </string>
+
+    <string name="code_perem_7">
+     <![CDATA[   //Использование переменных типа long.<br>
+        long days = getDays();<br>
+        long seconds;<br>
+        seconds = days * 24 * 60 * 60;]]>
+    </string>
+
+    <string name="code_perem_8">
+        <![CDATA[ //Объявление и инициализация переменных типа float.<br>
+        float usd = 31.24f;<br>
+        float eur = 44.03f;]]>
+    </string>
+
+    <string name="code_perem_9">
+      <![CDATA[  //Объявление и инициализация переменных типа double.<br>
+         double pi = 3.14159;]]>
+    </string>
+
+    <string name="code_perem_10">
+     <![CDATA[    public static void main(String[] args) {<br>
+	        char symb1=1067;<br>
+	        System.out.println("symb1 contains "+ symb1);]]>
+}
+    </string>
+
+    <string name="code_perem_11">
+      <![CDATA[  //Объявление и инициализация переменной типа boolean.<br>
+         boolean b = true;]]>
+    </string>
+    <string name="code_perem_12">
+       <![CDATA[  //Создание строки с помощью конструктора<br>
+        String myString = new String("The weather was fine");<br><br>
+        //Можно также создать строку используя кавычки ""<br>
+        String myString = "The weather was fine";]]>
+    </string>
+</resources>

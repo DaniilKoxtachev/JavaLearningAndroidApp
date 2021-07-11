@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_jdbc_1">
+
+    </string>
+
+    <string name="code_jdbc_2">
+
+    </string>
+    <string name="code_jdbc_3">
+         <![CDATA[
+         public void givenOracleSID_thenCreateConnectionObject() {<br>
+    String oracleJdbcUrl = "jdbc:oracle:thin:@myoracle.db.server:1521:my_sid";<br>
+    String username = "dbUser";<br>
+    String password = "1234567";<br><br>
+    try (Connection conn = DriverManager.getConnection(oracleJdbcUrl, username, password)) {<br>
+        assertNotNull(conn);<br>
+    } catch (SQLException e) {<br>
+        System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());<br>
+    }
+}<br><br>
+]]>
+    </string>
+    <string name="code_jdbc_4">
+
+    </string>
+    <string name="code_jdbc_5"><![CDATA[
+
+<b>DriverManager:</b> <br><br>
+
+private Connection getNewConnection() throws SQLException {<br>
+	String url = "jdbc:h2:mem:test";<br>
+	String user = "sa";<br>
+	String passwd = "sa";<br>
+	return DriverManager.getConnection(url, user, passwd);<br>
+}<br><br>
+<b>DataSource:</b><br><br>
+
+private DataSource getDatasource() {<br>
+	HikariConfig config = new HikariConfig();<br>
+	config.setUsername("sa");<br>
+	config.setPassword("sa");<br>
+	config.setJdbcUrl("jdbc:h2:mem:test");<br>
+	DataSource ds = new HikariDataSource(config);<br>
+	return ds;<br>
+} <br><br>
+<b>Statement:</b><br><br>
+
+private int executeUpdate(String query) throws SQLException {<br>
+	Statement statement = connection.createStatement();<br>
+	// Для Insert, Update, Delete<br>
+	int result = statement.executeUpdate(query);<br>
+	return result;<br>
+}<br><br>
+<b>PreparedStatement:</b><br><br>
+
+public void shouldSelectData() throws SQLException {<br>
+ 	createCustomerTable();<br>
+ 	String query = "SELECT * FROM customers WHERE name = ?";<br>
+	PreparedStatement statement = connection.prepareStatement(query);<br>
+	statement.setString(1, "Brian");<br>
+	boolean hasResult = statement.execute();<br>
+	assertTrue(hasResult);<br>
+}<br><br>
+<b>CallableStatement:</b><br><br>
+{call имя_процедуры[(?, ?, …)]}<br>
+<br>
+// Синтаксис для функции, возвращающей результат:<br>
+{? = call имя_процедуры[(?, ?, …)]}<br>
+<br>
+// Синтаксис хранимой процедуры без параметров:<br>
+{call имя_процедуры}<br>
+<br>
+<b>ResultSet:</b><br><br>
+
+public void shouldInsertInResultSet() throws SQLException {<br>
+	Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);<br>
+	ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");<br>
+	resultSet.moveToInsertRow();<br>
+	resultSet.updateLong("id", 3L);<br>
+	resultSet.updateString("name", "John");<br>
+	resultSet.updateInt("age", 18);<br>
+	resultSet.insertRow();<br>
+	resultSet.moveToCurrentRow();<br>
+}<br>
+<b>MetaData:</b><br><br>
+public void shoudGetMetadata() throws SQLException {<br>
+	// У нас URL = "jdbc:h2:mem:test", где test - название БД<br>
+	// Название БД = catalog<br>
+	DatabaseMetaData metaData = connection.getMetaData();<br>
+	ResultSet result = metaData.getTables("TEST", "PUBLIC", "%", null);<br>
+	List<String> tables = new ArrayList<>();<br>
+	while(result.next()) {<br>
+		tables.add(result.getString(2) + "." + result.getString(3));<br>
+	}
+	assertTrue(tables.contains("PUBLIC.CUSTOMERS"));<br><br>
+}
+
+    ]]></string>
+    <string name="code_jdbc_6">
+
+    </string>
+    <string name="code_jdbc_7">
+        <![CDATA[
+"-Djdbc.drivers=com.ibm.as400.access.AS400JDBCDriver"<br><br>
+         Class.forName("com.ibm.as400.access.AS400JDBCDriver");<br><br>
+  java.sql.DriverManager.registerDriver (new com.ibm.as400.access.AS400JDBCDriver ());<br><br>]]>
+    </string>
+    <string name="code_jdbc_8">
+
+    </string>
+    <string name="code_jdbc_9">
+
+    </string>
+    <string name="code_jdbc_10">
+         <![CDATA[
+private DataSource ds;<br>
+<br>
+public void businessMethod()<br>
+{<br>
+    Connection con = null;<br>
+    try<br>
+    {<br>
+        con = ds.getConnection();<br>
+<br>
+        // ....<br>
+<br>
+    }<br>
+    catch ( SQLException se ) {<br>
+        throw new EJBException( se );<br>
+    }<br>
+    finally {<br>
+        try { if ( con != null ) { con.close(); } } catch (Exception ignore) {}<br>
+    }<br>
+} <br>]]>
+    </string>
+</resources>

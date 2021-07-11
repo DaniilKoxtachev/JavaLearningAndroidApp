@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Fragments.DetailsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titleTxt"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/textColor"/>
+
+
+             <ImageView
+                   android:id="@+id/favImg"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:layout_margin="15dp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/star_empty"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/butt_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/castom_button"
+            android:text="Показать пример кода"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ovalColor">
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/ovalColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/descTxt"
+                    android:background="@color/ovalColor"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"/>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_coll_1">
+<![CDATA[<b> В данном вопросе отсутвует примера кода </b> ]]>
+    </string>
+
+    <string name="code_coll_2"><![CDATA[
+
+<b> Реализация интерфейса ArrayList</b>:<br><br>
+
+ArrayList<String> list = new ArrayList<>();<br>
+list.add("Hello");<br><br>
+
+<b> Реализация интерфейса LinkedList</b>: <br><br>
+
+       String str1 = new String("Hello World!");<br>
+       String str2 = new String("My name is Earl");<br>
+       String str3 = new String("I love Java");<br>
+       String str4 = new String("I live in Moscow");<br><br>
+
+       LinkedList<String> earlBio = new LinkedList<>();<br>
+       earlBio.add(str1);<br>
+       earlBio.add(str2);<br>
+       earlBio.add(str3);<br>
+       earlBio.add(str4);<br>
+
+       System.out.println(earlBio);<br><br>
+
+    <b> Реализация интерфейса Vector</b>: <br><br>
+
+     Vector v = new Vector(3, 2);<br>
+      System.out.println("Начальный размер: " + v.size());<br>
+      System.out.println("Начальная ёмкость: " + v.capacity());<br>
+
+      v.addElement(new Integer(1));<br>
+      v.addElement(new Integer(2));<br>
+      v.addElement(new Integer(3));<br>
+      v.addElement(new Integer(4));<br>
+      System.out.println("Ёмкость после четырёх сложений: " + v.capacity());<br><br>
+
+   <b>     Реализация интерфейса Stack </b>: <br><br>
+
+       public class StackDemo {<br>
+
+   static void showpush(Stack st, int a) {<br>
+      st.push(new Integer(a));<br>
+      System.out.println("Втолкнуть(" + a + ")");<br>
+      System.out.println("Стек: " + st);<br>
+   }
+<br><br>
+   static void showpop(Stack st) {<br>
+      System.out.print("Выстрелить -> ");<br>
+      Integer a = (Integer) st.pop();<br>
+      System.out.println(a);<br>
+      System.out.println("Стек: " + st);<br>
+   }<br><br>
+
+   public static void main(String args[]) {<br>
+      Stack st = new Stack();<br>
+      System.out.println("Стек: " + st);<br>
+      showpush(st, 42);<br>
+      showpush(st, 66);<br>
+      showpush(st, 99);<br>
+      showpop(st);<br>
+      showpop(st);<br>
+      showpop(st);<br>
+      try {<br>
+         showpop(st);<br>
+      } catch (EmptyStackException e) {<br>
+         System.out.println("Пустой стек");<br>
+      }
+   }
+}
+<br><br>
+
+<b>  Реализация интерфейса HashSet </b>: <br><br>
+
+ // Строит пустое множество<br>
+public HashSet()<br><br>
+
+// Строит множество из элементов коллекции<br>
+public HashSet(Collection c)<br><br>
+
+<b> Реализация интерфейса TreeSet </b>: <br><br>
+
+public void onClick(View view) {<br>
+    Random random = new Random(30);<br>
+    SortedSet<Integer> numberSet = new TreeSet<>();<br><br>
+
+    for(int i = 0; i < 1000; i++)<br>
+        numberSet.add(random.nextInt(10));<br>
+    mInfoTextView.setText(numberSet.toString());<br>
+}
+<br><br>
+
+<b> Реализация интерфейса LinkedHashSet </b>: <br><br>
+
+Класс LinkedHashSet расширяет класс HashSet, не добавляя никаких новых методов.<br> Класс поддерживает связный список элементов набора в том порядке, в котором они вставлялись. <br> Это позволяет организовать упорядоченную итерацию вставки в набор.<br><br>
+
+<b> Реализация интерфейса PriorityQueue </b>: <br><br>
+
+public class Priority2 {<br>
+    public static void main(String[] args) {<br>
+        Queue<Integer> priorityQueue1 = new PriorityQueue<>();<br>
+        for (int i = 5; i > 0; i—) {<br>
+            priorityQueue1.add(i);<br>
+        }<br><br>
+        System.out.println(priorityQueue1);<br>
+    priorityQueue1.offer(0);<br>
+        System.out.println(priorityQueue1);<br>
+    }
+}
+<br><br>
+<b> Реализация интерфейса PriorityQueue </b>: <br><br>
+
+  ArrayDeque<String> states = new ArrayDeque<String>();<br>
+
+        states.add("Germany");<br>
+        states.addFirst("France"); <br>
+        states.push("Great Britain"); <br>
+        states.addLast("Spain"); <br>
+        states.add("Italy");<br><br>
+
+        String sFirst = states.getFirst();<br>
+        System.out.println(sFirst);    <br>
+        String sLast = states.getLast();<br>
+        System.out.println(sLast);   <br><br>
+
+<b>   Реализация интерфейса Hashtable</b>: <br><br>
+
+        Hashtable balance = new Hashtable();<br>
+      Enumeration names;<br>
+      String str;<br>
+      double bal;<br><br>
+
+      balance.put("Маша", new Double(3434.34));<br>
+      balance.put("Михаил", new Double(123.22));<br>
+      balance.put("Олег", new Double(1378.00));<br>
+      balance.put("Денис", new Double(99.22));<br>
+      balance.put("Антон", new Double(-19.08));<br><br>
+
+     <b>    Реализация интерфейса HashMap</b>: <br><br>
+
+               HashMap<Integer, String> passportsAndNames = new HashMap<>();<br>
+
+
+       passportsAndNames.put(212133, "Лидия Аркадьевна Бубликова");<br>
+       passportsAndNames.put(162348, "Иван Михайлович Серебряков");<br>
+       passportsAndNames.put(8082771, "Дональд Джон Трамп");<br>
+       System.out.println(passportsAndNames);<br><br>
+
+     <b>    Реализация интерфейса TreeMap</b>: <br><br>
+
+         TreeMap<Person, Integer> map = new TreeMap<>(Comparator.comparingInt(o -> o.age));<br>
+      map.put(new Person("John", "Smith", 17), 0);<br>
+      map.put(new Person("Ivan", "Petrenko", 65), 0);<br>
+      map.put(new Person("Pedro", "Escobar", 32), 0);<br>
+      map.put(new Person("Radion", "Pyatkin", 14), 0);<br>
+      map.put(new Person("Sergey", "Vashkevich", 19), 0);<br><br>
+
+
+
+    ]]></string>
+
+    <string name="code_coll_3">
+<![CDATA[<b> В данном вопросе отсутвует примера кода </b> ]]>
+    </string>
+
+    <string name="code_coll_4">
+        <![CDATA[
+
+List<String> cities = new ArrayList<>();<br>
+cities.add(“Warsaw”);<br>
+cities.add(“Prague”);<br>
+cities.add(“Budapest”);<br><br>
+
+Iterator<String> cityIterator = cities.iterator();<br>
+cityIterator.next();<br>
+cities.remove(1);<br>
+cityIterator.next(); <br>// генерирует ConcurrentModificationException<br><br>]]>
+    </string>
+
+    <string name="code_coll_5">
+ <![CDATA[
+ <b>fail-fast</b>:<br><br>
+ public class FailFastIteratorExample {    <br>
+    public static void main(String[] args) {<br>
+
+        // Создание ArrayList целых чисел<br>
+        ArrayList<Integer> list = new ArrayList<Integer>();<br><br>
+
+        // Добавление элементов в список<br>
+        list.add(1452);<br>
+        list.add(6854);<br>
+        list.add(8741);<br><br>
+
+        // Получение итератора из списка<br>
+        Iterator<Integer> it = list.iterator();<br><br>
+
+        while (it.hasNext()) {<br>
+            Integer integer = (Integer) it.next();<br>
+            // Это вызовет исключение <br>
+            // ConcurrentModificationException<br>
+            list.add(8457);      <br>
+        }
+    }
+}
+<br><br>
+ <b>fail-safe</b>:<br><br>
+        public class FailSafeIteratorExample {<br>
+    public static void main(String[] args) {<br><br>
+
+        // Создание ConcurrentHashMap<br>
+        ConcurrentHashMap<String, Integer> map =
+            new ConcurrentHashMap<String, Integer>();<br><br>
+
+        // Добавляем элементы на карту<br>
+        map.put("ONE", 1);<br>
+        map.put("TWO", 2);<br>
+        map.put("THREE", 3);<br><br>
+
+        // Получение итератора из карты<br>
+        Iterator<String> it = map.keySet().iterator();<br><br>
+
+        while (it.hasNext()) {<br>
+            String key = (String) it.next();<br>
+            System.out.println(key+" : "+map.get(key));<br>
+            // Это не будет отражено в Iterator<br>
+            map.put("FOUR", 4);<br>
+        }
+    }
+}<br><br>]]>
+
+    </string>
+
+    <string name="code_coll_6">
+         <![CDATA[
+<b> Реализация интерфейса ArrayList</b>:<br><br>
+
+ArrayList<String> list = new ArrayList<>();<br>
+list.add("Hello");<br><br>
+
+Реализация интерфейса LinkedList</b>: <br><br>
+
+       String str1 = new String("Hello World!");<br>
+       String str2 = new String("My name is Earl");<br>
+       String str3 = new String("I love Java");<br>
+       String str4 = new String("I live in Moscow");<br><br>
+
+       LinkedList<String> earlBio = new LinkedList<>();<br>
+       earlBio.add(str1);<br>
+       earlBio.add(str2);<br>
+       earlBio.add(str3);<br>
+       earlBio.add(str4);<br>
+
+       System.out.println(earlBio);<br><br>]]>
+
+    </string>
+
+    <string name="code_coll_7">
+      <![CDATA[
+public static void main(String[] args) {<br>
+
+   ArrayList<Cat> cats = new ArrayList<>();<br>
+   Cat thomas = new Cat("Томас");<br>
+   Cat behemoth = new Cat("Бегемот");<br>
+   Cat philipp = new Cat("Филипп Маркович");<br>
+   Cat pushok = new Cat("Пушок");<br>
+<br>
+   cats.add(thomas);<br>
+   cats.add(behemoth);<br>
+   cats.add(philipp);<br>
+   cats.add(pushok);<br>
+   System.out.println(cats.toString());<br><br>
+
+  <b> cats.remove(philipp);</b><br>
+
+   System.out.println(cats.toString());<br><br>]]>
+}
+    </string>
+
+    <string name="code_coll_8"><![CDATA[
+
+ HashMap<Integer, String> passportsAndNames = new HashMap<>();<br>
+
+
+       passportsAndNames.put(212133, "Лидия Аркадьевна Бубликова");<br>
+       passportsAndNames.put(162348, "Иван Михайлович Серебряков");<br>
+       passportsAndNames.put(8082771, "Дональд Джон Трамп");<br>
+       System.out.println(passportsAndNames);<br><br>
+
+
+public class IdentityHashMapExample<br>
+{<br>
+    public static void main(String[] args)<br>
+    {<br>
+
+        Map<String, String> ihm = new IdentityHashMap<>();<br>
+        ihm.put("ihmkey","ihmvalue");<br>
+        ihm.put(new String("ihmkey"),"ihmvalue1");<br>
+        System.out.println("Size of IdentityHashMap—"+ihm.size());<br>
+    }
+}<br><br>
+    ]]></string>
+
+    <string name="code_coll_9">
+  <![CDATA[
+Map<Employee, Integer> weakHashMap = new WeakHashMap<>();<br>
+
+Employee ray = new Employee(1, "Ray");<br>
+Employee sierra = new Employee(2, "Sierra");<br>
+
+weakHashMap.put(ray, 3);<br>
+weakHashMap.put(sierra, 4);<br>
+
+System.out.println(weakHashMap);<br>
+ //{[Employee{id=1 ,name=Ray}]=3, [Employee{id=2 ,name=Sierra}]=4}<br>
+
+sierra = null;<br>
+
+System.gc();<br>
+
+System.out.println(weakHashMap); //{[Employee{id=1 ,name=Ray}]=3}<br><br> ]]>
+    </string>
+
+    <string name="code_coll_10">
+         <![CDATA[
+public static void main(String[] args) {<br>
+
+   HashMap<Integer, String> passportsAndNames = new HashMap<>();<br>
+   HashMap<Integer, String> passportsAndNames2 = new HashMap<>();<br>
+
+   passportsAndNames.put(212133, "Лидия Аркадьевна Бубликова");<br>
+   passportsAndNames.put(162348, "Иван Михайлович Серебряков");<br>
+   passportsAndNames.put(8082771, "Дональд Джон Трамп");<br>
+
+   passportsAndNames2.put(917352, "Алексей Андреевич Ермаков");<br>
+   passportsAndNames2.put(925648, "Максим Олегович Архаров");<br>
+
+
+   passportsAndNames.putAll(passportsAndNames2);<br>
+   System.out.println(passportsAndNames);<br><br>
+
+}]]>
+    </string>
+</resources>

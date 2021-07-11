@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000f07</color>
+    <color name="colorPrimaryDark">#000f07</color>
+    <color name="colorAccent">#00695C</color>
+    <color name="slide">#E0E0E0</color>
+    <color name="textColor">#000000</color>
+
+    <color name="startBg">#00695C</color>
+    <color name="endBg">#1DE9B6</color>
+    <color name="headerBgStart">#1DE9B6</color>
+    <color name="headerBgEnd">#00695C</color>
+    <color name="ovalColor">#FFFFFF</color>
+    <color name="chatColor"> #00796B</color>
+
+
+
+</resources>

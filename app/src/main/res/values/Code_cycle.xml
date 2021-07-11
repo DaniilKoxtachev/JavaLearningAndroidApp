@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_cycle_item_1">
+      <![CDATA[  no primer]]>
+    </string>
+    <string name="code_cycle_item_2">
+     <![CDATA[   for (инициализация; условие; итерация) {<br>
+            //тело цикла<br>
+        }<br>]]>
+    </string>
+    <string name="code_cycle_item_3">
+      <![CDATA[  while(логическое_выражение) {<br>
+            //тело цикла<br>
+        }<br>]]>
+    </string>
+    <string name="code_cycle_item_4">
+     <![CDATA[  do {<br>
+            //тело цикла<br>
+        }while(логическое_выражение);<br>]]>
+    </string>
+    <string name="code_cycle_item_5">
+  <![CDATA[   for (int i = 0; i > max; i++) {<br>
+            // если символ на позиции i в строке равен искомому символу<br><br>
+            if (searchMe.charAt(i) == symb) {<br>
+                //переключаемся в режим "найдено" и выходим из цикла<br>
+                find = true;<br>
+                break;<br>
+            }<br>]]>
+    </string>
+</resources>

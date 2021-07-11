@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "254091207708",
+    "firebase_url": "https://javalearningbd-default-rtdb.firebaseio.com",
+    "project_id": "javalearningbd",
+    "storage_bucket": "javalearningbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254091207708:android:e89fda71bb6d3e51b16bd9",
+        "android_client_info": {
+          "package_name": "com.test.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254091207708-f0rvfmnnmqidfmh9e1fts61f1tmgke19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqGoZXe3lyWR32pJpvkp6kOkaez7HmGRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254091207708-f0rvfmnnmqidfmh9e1fts61f1tmgke19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

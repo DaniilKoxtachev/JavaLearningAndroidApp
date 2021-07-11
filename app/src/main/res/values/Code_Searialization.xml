@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="code_ser_1">
+        <![CDATA[
+        class parent implements Serializable {<br>
+  int parentVersion = 10;<br>
+}<br><br>
+
+class contain implements Serializable{<br>
+  int containVersion = 11;<br>
+}<br><br>
+public class SerialTest extends parent implements Serializable {<br>
+  int version = 66;<br>
+  contain con = new contain();<br>
+<br><br>
+  public int getVersion() {<br>
+    return version;<br>
+  }<br><br>
+  public static void main(String args[]) throws IOException {<br>
+    FileOutputStream fos = new FileOutputStream("temp.out");<br>
+    ObjectOutputStream oos = new ObjectOutputStream(fos);<br>
+    SerialTest st = new SerialTest();<br>
+    oos.writeObject(st);<br>
+    oos.flush();<br>
+    oos.close();<br>
+  }
+}<br><br>
+        ]]>
+    </string>
+    <string name="code_ser_2">
+ <![CDATA[
+ <b>Сериализация:</b><br><br>
+        public class Main {<br>
+
+   public static void main(String[] args) throws IOException {<br>
+
+       //создаем наш объект<br>
+       String[] territoryInfo = {"У Испании 6 провинций", "У России 10 провинций", "У Франции 8 провинций"};<br>
+       String[] resourcesInfo = {"У Испании 100 золота", "У России 80 золота", "У Франции 90 золота"};<br>
+       String[] diplomacyInfo = {"Франция воюет с Россией, Испания заняла позицию нейтралитета"};<br>
+
+       SavedGame savedGame = new SavedGame(territoryInfo, resourcesInfo, diplomacyInfo);<br><br>
+
+       //создаем 2 потока для сериализации объекта и сохранения его в файл<br>
+       FileOutputStream outputStream = new FileOutputStream("C:\\Users\\Username\\Desktop\\save.ser");<br>
+       ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);<br><br>
+
+       // сохраняем игру в файл<br>
+       objectOutputStream.writeObject(savedGame);<br><br>
+
+       //закрываем поток и освобождаем ресурсы<br>
+       objectOutputStream.close();<br>
+   }
+}
+<br><br>
+<b>Десериализация: </b><br><br>
+public class Main {<br>
+
+   public static void main(String[] args) throws IOException, ClassNotFoundException {<br>
+
+       FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Username\\Desktop\\save.ser");<br>
+       ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);<br>
+
+       SavedGame savedGame = (SavedGame) objectInputStream.readObject();<br>
+
+       System.out.println(savedGame);<br>
+   }
+}
+<br><br>
+]]>
+    </string>
+
+    <string name="code_ser_3">
+         <![CDATA[
+public class Logon implements Externalizable {<br>
+    private String login;<br>
+    private String password;<br>
+
+    public Logon() {<br>
+    }
+<br><br>
+    public Logon(String login, String password) {<br>
+        this.login = login;<br>
+        this.password = password;<br>
+    }
+<br><br>
+    @Override<br>
+    public void writeExternal(ObjectOutput out) throws IOException {<br>
+        out.writeObject(login);<br>
+    }
+        <br><br>
+
+    @Override<br>
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {<br>
+        login = (String) in.readObject();<br>
+    }<br>
+<br><br>
+    public static void main(String[] args) throws IOException, ClassNotFoundException {<br>
+        Logon igor = new Logon("IgorIvanovich", "Khoziain");<br>
+        Logon renat = new Logon("Renat", "2500RUB");<br>
+        System.out.println("Before: \n" + igor);<br>
+        System.out.println(renat);<br>
+<br>
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Externals.out"));<br>
+        out.writeObject(igor);<br>
+        out.writeObject(renat);<br>
+        out.close();<br>
+<br>
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("Externals.out"));<br>
+        igor = (Logon) in.readObject();<br>
+        renat = (Logon) in.readObject();<br>
+<br>
+        System.out.println("After: \n" + igor);<br>
+        System.out.println(renat);<br>
+    }
+} <br><br>]]>
+    </string>
+
+    <string name="code_ser_4">
+    <![CDATA[
+public class FileReader implements Serializable {<br>
+    // Первые 2 поля не реализуют Serializable<br>
+    // Помечаем их как transient поля<br>
+    private transient InputStream is;<br>
+    private transient BufferedReader buf;<br>
+    private String fileName;<br>
+<br><br>
+    // Constructors, Getters, Setters<br>
+
+    public String readFile() throws IOException {<br>
+        try {<br>
+            is = new FileInputStream(fileName);<br>
+            buf = new BufferedReader(new InputStreamReader(is));<br>
+            String line = buf.readLine();<br>
+            StringBuilder sb = new StringBuilder();<br>
+            while (line != null) {<br>
+                sb.append(line).append("\n");<br>
+                line = buf.readLine();<br>
+            }<br>
+            return sb.toString();<br>
+        } finally {<br>
+            if (buf != null) {<br>
+                buf.close();<br>
+            }<br>
+            if (is != null) {<br>
+                is.close();<br>
+            }
+        }
+    }
+} <br><br>]]>
+    </string>
+
+    <string name="code_ser_5">
+ <![CDATA[
+public class JUnitPerson<br>
+{<br>
+    private  static  final  String  FILE       = "data.ser";<br>
+    private  static  final  String  FNAME_Alex = "Алексей" ;<br>
+    private  static  final  String  FNAME_Olga = "Ольга"   ;<br>
+    private  static  final  String  LAST_NAME  = "Иванов"  ;<br>
+    private  static  final  int     AGE_Alex   = 39        ;<br>
+    private  static         Person  alex       = null      ;<br>
+    private  static         Person  olga       = null      ;<br>
+<br>
+    @BeforeClass<br>
+    public static void setUpBeforeClass() throws Exception<br>
+    {<br>
+        try {<br>
+            alex = new Person(FNAME_Alex, LAST_NAME, AGE_Alex);<br>
+            olga = new Person(FNAME_Olga, LAST_NAME, 38);<br>
+<br>
+            alex.setSpouse(olga);<br>
+            olga.setSpouse(alex);<br>
+<br>
+            FileOutputStream   fos = new FileOutputStream(FILE);<br>
+            ObjectOutputStream oos = new ObjectOutputStream(fos);<br>
+            oos.writeObject(alex);<br>
+            oos.writeObject(olga);<br>
+            oos.close();<br>
+        } catch (Exception e) {<br>
+            fail("Exception thrown during test: " + e.toString());<br>
+        }
+    }
+<br><br>
+    @AfterClass<br>
+    public static void tearDownAfterClass() throws Exception {<br>
+        // Удаление файла<br>
+        new File(FILE).delete();<br>
+    }<br><br>
+    @Test<br>
+    public void testSerialization()<br>
+    {<br>
+        try {<br>
+            FileInputStream fis = new FileInputStream(FILE);<br>
+            ObjectInputStream ois = new ObjectInputStream(fis);<br>
+            Person alex = (Person) ois.readObject();<br>
+            Person olga = (Person) ois.readObject();<br>
+            ois.close();<br>
+<br>
+            assertEquals(alex.getFirstName(), FNAME_Alex);<br>
+            assertEquals(alex.getLastName() , LAST_NAME );<br>
+            assertEquals(olga.getFirstName(), FNAME_Olga);<br>
+            assertEquals(alex.getAge()      , AGE_Alex  );<br>
+            assertEquals(alex.getSpouse().getFirstName(), FNAME_Olga);<br>
+<br>
+        } catch (Exception e) {<br>
+            fail("Exception thrown during test: " + e.toString());<br>
+        }
+    }
+} <br><br>]]>
+    </string>
+
+    <string name="code_ser_6">
+         <![CDATA[
+public class DemoClass implements java.io.Serializable {<br>
+
+    private static final long serialVersionUID = 4L;        <br>
+    private static final String fileName = "DemoClassBytes.ser"; <br>
+    private static final Logger logger = Logger.getLogger("");<br>
+    private static String staticVariable;<br>
+    private int intVariable;<br>
+     <br>
+    transient private String transientVariable = "this is a transient instance field";<br>
+    private Thread threadClass;<br>
+      <br>
+    public static void main(String[] args) throws IOException, ClassNotFoundException <br>
+    {<br>
+        //Serialization<br>
+
+        DemoClass test = new DemoClass();<br>
+        test.intVariable = 1;<br>
+        staticVariable = "this is a static variable";<br>
+        writeOut(test);<br>
+        System.out.println("DemoClass to be saved: " + test);<br>
+     <br><br>
+        //De-serialization<br>
+
+        System.out.println("DemoClass deserialized: " + readIn());<br>
+    }<br>
+      <br>
+    private static Object readIn() throws IOException, ClassNotFoundException {<br>
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(fileName)));<br>
+        return ois.readObject();<br>
+    }<br>
+      <br>
+    private static void writeOut(java.io.Serializable obj) throws IOException {<br>
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(fileName)));<br>
+        oos.writeObject(obj);<br>
+        oos.close();<br>
+    }<br>
+      <br>
+    @Override public String toString() {<br>
+        return "DemoClass: final static fileName=" + fileName + ", final static logger=" + logger<br>
+                + ", non-final static staticVariable=" + staticVariable + ", instance intVariable=" + intVariable<br>
+                + ", transient instance transientVariable=" + transientVariable + ", non-serializable instance field threadClass:=" + threadClass;<br>
+    }
+}<br><br> ]]>
+    </string>
+
+    <string name="code_ser_7">
+          <![CDATA[
+        public class ConnectionFactory implements Serializable{<br>
+ private static ConnectionFactory INSTANCE;<br>
+ private ConnectionFactory(){  <br>
+ }
+        <br><br>
+ public static ConnectionFactory getInstance(){<br>
+
+  if(INSTANCE ==null){<br>
+   //Locking the class object<br>
+   synchronized(ConnectionFactory.class){<br>
+<br>
+    if(INSTANCE==null)<br>
+     INSTANCE=new ConnectionFactory();<br>
+   }
+  }
+  <br>
+  return INSTANCE;<br>
+ }
+}
+
+public class SerializationTest {<br>
+ public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {<br>
+  ConnectionFactory INSTANCE=ConnectionFactory.getInstance();<br>
+        <br>
+  ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("connFactory.ser"));<br>
+        oos.writeObject(INSTANCE);<br>
+        oos.close();<br>
+<br>
+
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("connFactory.ser"));<br>
+        ConnectionFactory factory1 = (ConnectionFactory) ois.readObject();<br>
+        ois.close();<br>
+        <br>
+        ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream("connFactory.ser"));<br>
+        ConnectionFactory factory2 = (ConnectionFactory) ois2.readObject();<br>
+        ois2.close();<br>
+        <br>
+        System.out.println("Instance reference check->" +factory1.getInstance());<br>
+        System.out.println("Instance reference check->" +factory2.getInstance());<br>
+        System.out.println("=========================================================");<br>
+        System.out.println("Object reference check->"+factory1);<br>
+        System.out.println("Object reference check->"+factory2);<br>
+ }
+
+}<br><br>]]>
+    </string>
+
+    <string name="code_ser_8">
+ <![CDATA[<b> В данном вопросе отсутвует примера кода </b> ]]>
+    </string>
+</resources>

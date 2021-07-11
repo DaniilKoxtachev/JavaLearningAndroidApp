@@ -1,0 +1,363 @@
+<resources>
+    <string name="app_name">Java Learning</string>
+
+    <string name="search">Search</string>
+
+    <string name="settings">Настройки</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="item_section_perem">
+        <item>Объявление переменных</item>
+        <item>Правила именования переменных </item>
+        <item>Ссылочные типы данных</item>
+        <item>Тип Byte</item>
+        <item>Тип Short</item>
+        <item>Тип Int</item>
+        <item>Тип Long</item>
+        <item>Тип Float</item>
+        <item>Тип Double</item>
+        <item>Тип Char</item>
+        <item>Тип Boolean</item>
+        <item>Тип String</item>
+    </string-array>
+
+    <string-array name="item_subsection_perem">
+        <item>@string/perem_item_1 </item>
+        <item>@string/perem_item_2  </item>
+        <item>@string/perem_item_3  </item>
+        <item>@string/perem_item_4  </item>
+        <item>@string/perem_item_5  </item>
+        <item>@string/perem_item_6  </item>
+        <item>@string/perem_item_7  </item>
+        <item>@string/perem_item_8  </item>
+        <item>@string/perem_item_9  </item>
+        <item>@string/perem_item_10  </item>
+        <item>@string/perem_item_11  </item>
+        <item>@string/perem_item_12 </item>
+    </string-array>
+
+    <string-array name="code_array_perem_subsecttion">
+        <item>@string/code_perem_1</item>
+        <item>@string/code_perem_2</item>
+        <item>@string/code_perem_3</item>
+        <item>@string/code_perem_4</item>
+        <item>@string/code_perem_5</item>
+        <item>@string/code_perem_6</item>
+        <item>@string/code_perem_7</item>
+        <item>@string/code_perem_8</item>
+        <item>@string/code_perem_9</item>
+        <item>@string/code_perem_10</item>
+        <item>@string/code_perem_11</item>
+        <item>@string/code_perem_12</item>
+    </string-array>
+
+    <string-array name="item_section_oper">
+        <item>Операторы в логическом \n выражении</item>
+        <item>Отличие == и equals</item>
+        <item>Оператор If</item>
+        <item>Оператор If-else</item>
+        <item>Оператор Switch-case</item>
+    </string-array>
+    <string-array name="item_subsection_oper">
+        <item>@string/oper_item_1</item>
+        <item>@string/oper_item_2</item>
+        <item>@string/oper_item_3</item>
+        <item>@string/oper_item_4</item>
+        <item>@string/oper_item_5</item>
+    </string-array>
+    <string-array name="code_array_oper_subsection">
+        <item>@string/code_oper_1</item>
+        <item>@string/code_oper_2</item>
+        <item>@string/code_oper_3</item>
+        <item>@string/code_oper_4</item>
+        <item>@string/code_oper_5</item>
+    </string-array>
+    <string-array name="item_section_cycle">
+        <item>Применение операторов цикла</item>
+        <item>Цикл For</item>
+        <item>Цикл While</item>
+        <item>Цикл Do-While</item>
+        <item>Досрочный выход из цикла\n(оператор Break)</item>
+    </string-array>
+    <string-array name="item_subsection_cycle">
+        <item>@string/cycle_item_1</item>
+        <item>@string/cycle_item_2</item>
+        <item>@string/cycle_item_3</item>
+        <item>@string/cycle_item_4</item>
+        <item>@string/cycle_item_5</item>
+    </string-array>
+    <string-array name="code_array_cycle_subsection">
+        <item>@string/code_cycle_item_1</item>
+        <item>@string/code_cycle_item_2</item>
+        <item>@string/code_cycle_item_3</item>
+        <item>@string/code_cycle_item_4</item>
+        <item>@string/code_cycle_item_5</item>
+    </string-array>
+    <string-array name="item_section_OOP">
+        <item>Что такое ООП</item>
+        <item>Основные принципы ООП</item>
+        <item>Инкапсуляция</item>
+        <item>Наследование</item>
+        <item>Полиморфизм</item>
+        <item>Абстракция</item>
+        <item>Что представляет собой «обмен сообщениями»</item>
+        <item>Основные понятия ООП: «класс», «объект», «интерфейс»</item>
+        <item>Преимущества и недостатки ООП в программировании</item>
+    </string-array>
+
+    <string-array name="item_subsection_OOP">
+        <item>@string/sub_item_1</item>
+        <item>@string/sub_item_2</item>
+        <item>@string/sub_item_3</item>
+        <item>@string/sub_item_4</item>
+        <item>@string/sub_item_5</item>
+        <item>@string/sub_item_6</item>
+        <item>@string/sub_item_7</item>
+        <item>@string/sub_item_8</item>
+        <item>@string/sub_item_9</item>
+    </string-array>
+
+    <string-array name="code_array_OOP_subsection">
+        <item>@string/code_item_OOP_1</item>
+        <item>@string/code_item_OOP_2</item>
+        <item>@string/code_item_OOP_3</item>
+        <item>@string/code_item_OOP_4</item>
+        <item>@string/code_item_OOP_5</item>
+        <item>@string/code_item_OOP_6</item>
+        <item>@string/code_item_OOP_7</item>
+        <item>@string/code_item_OOP_8</item>
+        <item>@string/code_item_OOP_9</item>
+    </string-array>
+
+    <string-array name="item_section_core">
+        <item>Отличия JRE,JVM,JDK</item>
+        <item>Модификаторы доступа</item>
+        <item>Ключевое слово Final</item>
+        <item>Функция Main()</item>
+        <item>Модификатор Abstract</item>
+        <item>Понятие "Интерфейс"</item>
+        <item>Отличия абстрактного класса от интерфейса</item>
+        <item>Статический класс</item>
+        <item>Аннонимный класс</item>
+        <item>Локальный класс</item>
+    </string-array>
+
+    <string-array name="item_subsection_core">
+        <item>@string/core_item_1</item>
+        <item>@string/core_item_2</item>
+        <item>@string/core_item_3</item>
+        <item>@string/core_item_4</item>
+        <item>@string/core_item_5</item>
+        <item>@string/core_item_6</item>
+        <item>@string/core_item_7</item>
+        <item>@string/core_item_8</item>
+        <item>@string/core_item_9</item>
+        <item>@string/core_item_10</item>
+    </string-array>
+
+    <string-array name="code_array_core_subsection">
+        <item>@string/code_core_1</item>
+        <item>@string/code_core_2</item>
+        <item>@string/code_core_3</item>
+        <item>@string/code_core_4</item>
+        <item>@string/code_core_5</item>
+        <item>@string/code_core_6</item>
+        <item>@string/code_core_7</item>
+        <item>@string/code_core_8</item>
+        <item>@string/code_core_9</item>
+        <item>@string/code_core_10</item>
+    </string-array>
+
+    <string-array name="item_section_collection">
+        <item>Что такое коллекция</item>
+        <item>Интерфейсы JCF и их реализации</item>
+        <item>Классы java.util.Collection и java.util.Collections</item>
+        <item>«fail-fast поведение»</item>
+        <item>Отличия fail-fast и fail-safe</item>
+        <item>Отличия ArrayList от LinkedList</item>
+        <item>Удаление элементов из ArrayList?\n и размер ArrayList?</item>
+        <item>Отличия HashMap и \n IdentityHashMap?</item>
+        <item>Для чего используется\n WeakHashMap</item>
+        <item>Как устроен HashMap</item>
+    </string-array>
+    <string-array name="item_subsection_collection">
+        <item>@string/coll_item_1</item>
+        <item>@string/coll_item_2</item>
+        <item>@string/coll_item_3</item>
+        <item>@string/coll_item_4</item>
+        <item>@string/coll_item_5</item>
+        <item>@string/coll_item_6</item>
+        <item>@string/coll_item_7</item>
+        <item>@string/coll_item_8</item>
+        <item>@string/coll_item_9</item>
+        <item>@string/core_item_10</item>
+    </string-array>
+    <string-array name="code_array_collection_subsection">
+        <item>@string/code_coll_1</item>
+        <item>@string/code_coll_2</item>
+        <item>@string/code_coll_3</item>
+        <item>@string/code_coll_4</item>
+        <item>@string/code_coll_5</item>
+        <item>@string/code_coll_6</item>
+        <item>@string/code_coll_7</item>
+        <item>@string/code_coll_8</item>
+        <item>@string/code_coll_9</item>
+        <item>@string/code_coll_10</item>
+
+
+    </string-array>
+
+    <string-array name="item_section_potok">
+        <item>Разница между IO и NIO</item>
+        <item>Особенности NIO</item>
+        <item>Что такое канал</item>
+        <item>Основные классы потоков \n ввода/вывода</item>
+        <item>Подклассы класса InputStream</item>
+        <item>Для чего используется PushbackInputStream</item>
+        <item>Для чего используется SequenceInputStream</item>
+        <item>Подклассы класса OutputStream</item>
+        <item>Подклассы класса Reader</item>
+        <item>Подклассы класса Writer</item>
+        <item>Отличие класса PrintWriter\n от PrintStream</item>
+        <item>Отличия InputStream, OutputStream, Reader, Writer</item>
+        <item>Методы класса File</item>
+        <item>Интерфейс FileFilter</item>
+    </string-array>
+    <string-array name="item_subsection_potok">
+        <item>@string/potok_item_1</item>
+        <item>@string/potok_item_2</item>
+        <item>@string/potok_item_3</item>
+        <item>@string/potok_item_4</item>
+        <item>@string/potok_item_5</item>
+        <item>@string/potok_item_6</item>
+        <item>@string/potok_item_7</item>
+        <item>@string/potok_item_8</item>
+        <item>@string/potok_item_9</item>
+        <item>@string/potok_item_10</item>
+        <item>@string/potok_item_11</item>
+        <item>@string/potok_item_12</item>
+        <item>@string/potok_item_13</item>
+        <item>@string/potok_item_14</item>
+    </string-array>
+    <string-array name="item_section_serialization">
+        <item>Что такое «сериализация»</item>
+        <item>Процесс сериализации\n/десериализации</item>
+        <item>Изменение поведения\n сериализации/десериализации</item>
+        <item>Ключевое слово transient</item>
+        <item>Модификаторы полей static и final</item>
+        <item>Поле serialVersionUID</item>
+        <item>Проблема сериализации Singleton</item>
+        <item>Способы контроля за значениями десериализованного объекта</item>
+    </string-array>
+    <string-array name="item_subsection_serialization">
+        <item>@string/ser_item_1</item>
+        <item>@string/ser_item_2</item>
+        <item>@string/ser_item_3</item>
+        <item>@string/ser_item_4</item>
+        <item>@string/ser_item_5</item>
+        <item>@string/ser_item_6</item>
+        <item>@string/ser_item_7</item>
+        <item>@string/ser_item_8</item>
+    </string-array>
+    <string-array name="code_array_serialization_subsection">
+        <item>@string/code_ser_1</item>
+        <item>@string/code_ser_2</item>
+        <item>@string/code_ser_3</item>
+        <item>@string/code_ser_4</item>
+        <item>@string/code_ser_5</item>
+        <item>@string/code_ser_6</item>
+        <item>@string/code_ser_7</item>
+        <item>@string/code_ser_8</item>
+
+    </string-array>
+
+    <string-array name="item_section_multithreading">
+        <item>Модель памяти Java</item>
+        <item>Основные области модели памяти</item>
+        <item>Потокобезопасность</item>
+        <item>«Конкуренция» и «Параллелизм»</item>
+        <item>«Кооперативная многозадачность»</item>
+        <item>Отличия процесса от потока</item>
+        <item>«Зелёные потоки»</item>
+        <item>Как создать поток</item>
+        <item>Отличия Thread и Runnable</item>
+        <item>Отличия методов start() и run()</item>
+        <item>Как принудительно запустить\n поток</item>
+        <item>Понятие «синхронизация»</item>
+        <item>Способы синхронизации</item>
+        <item>В каких состояниях может\n находиться поток</item>
+        <item>Как работают методы wait() и \nnotify()/notifyAll()</item>
+        <item>Разница между notify() и notifyAll()</item>
+        <item>Отличия методов Thread.sleep() и Thread.yield()</item>
+        <item>Deadlock</item>
+        <item>Livelock</item>
+        <item>«Приоритет потока»</item>
+        <item>«Потоки-демоны»</item>
+        <item>Интерфейсы Runnable и Callable</item>
+        <item>Semaphore</item>
+    </string-array>
+    <string-array name="item_subsection_multithreading">
+        <item>@string/multi_item_1</item>
+        <item>@string/multi_item_2</item>
+        <item>@string/multi_item_3</item>
+        <item>@string/multi_item_4</item>
+        <item>@string/multi_item_5</item>
+        <item>@string/multi_item_6</item>
+        <item>@string/multi_item_7</item>
+        <item>@string/multi_item_8</item>
+        <item>@string/multi_item_9</item>
+        <item>@string/multi_item_10</item>
+        <item>@string/multi_item_11</item>
+        <item>@string/multi_item_12</item>
+        <item>@string/multi_item_13</item>
+        <item>@string/multi_item_14</item>
+        <item>@string/multi_item_15</item>
+        <item>@string/multi_item_16</item>
+        <item>@string/multi_item_17</item>
+        <item>@string/multi_item_18</item>
+        <item>@string/multi_item_19</item>
+        <item>@string/multi_item_20</item>
+        <item>@string/multi_item_21</item>
+        <item>@string/multi_item_22</item>
+        <item>@string/multi_item_23</item>
+    </string-array>
+
+    <string-array name="item_section_JDBC">
+        <item>Что такое JDBC</item>
+        <item>Преимущества использования\n JDBC</item>
+        <item>JDBC URL</item>
+        <item>Из каких частей стоит JDBC</item>
+        <item>Основные классы и \n интерфейсы JDBC</item>
+        <item>Основные этапы работы с базой данных \n при использовании JDBC</item>
+        <item>Реистрация драйверов JDBC</item>
+        <item>Формирование запросов к БД</item>
+        <item>Как осуществляется запрос к базе данных и обработка результатов</item>
+        <item>Как закрыть соединение \n с базой данных</item>
+    </string-array>
+    <string-array name="item_subsection_JDBC">
+        <item>@string/jdbc_item_1</item>
+        <item>@string/jdbc_item_2</item>
+        <item>@string/jdbc_item_3</item>
+        <item>@string/jdbc_item_4</item>
+        <item>@string/jdbc_item_5</item>
+        <item>@string/jdbc_item_6</item>
+        <item>@string/jdbc_item_7</item>
+        <item>@string/jdbc_item_8</item>
+        <item>@string/jdbc_item_9</item>
+        <item>@string/jdbc_item_10</item>
+    </string-array>
+    <string-array name="code_array_jdbc_subsection">
+        <item>@string/code_jdbc_1</item>
+        <item>@string/code_jdbc_2</item>
+        <item>@string/code_jdbc_3</item>
+        <item>@string/code_jdbc_4</item>
+        <item>@string/code_jdbc_5</item>
+        <item>@string/code_jdbc_6</item>
+        <item>@string/code_jdbc_7</item>
+        <item>@string/code_jdbc_8</item>
+        <item>@string/code_jdbc_9</item>
+        <item>@string/code_jdbc_10</item>
+
+    </string-array>
+</resources>

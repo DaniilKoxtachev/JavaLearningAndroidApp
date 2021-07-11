@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+       <string name="code_core_1">
+ <![CDATA[<b> В данном вопросе отсутвует примера кода </b> ]]>
+    </string>
+    <string name="code_core_2">
+ <![CDATA[
+ <b> Модификатор private</b> :<br><br>
+public class Clock {<br>
+    private long time = 0;<br>
+    public long getTime() {<br>
+        return this.time;<br>
+    }<br>
+    public void setTime(long theTime) {<br>
+        this.time = theTime;<br>
+    }
+}
+<br><br>
+
+ <b> Модификатор default</b> :<br><br>
+ public class Clock {<br>
+    long time = 0;<br>
+}<br>
+<br><br>
+public class ClockReader {<br>
+    Clock clock = new Clock();<br>
+
+    public long readClock{<br>
+        return clock.time;<br>
+    }
+}
+<br><br>
+
+<b> Модификатор protected</b> :<br><br>
+public class Clock {<br>
+    protected long time = 0; <br>   // time in milliseconds<br>
+}<br>
+public class SmartClock() extends Clock{<br>
+    public long getTimeInSeconds() {<br>
+        return this.time / 1000;<br>
+    }
+}
+<br><br>
+<b> Модификатор public </b> :<br><br>
+public class Clock {<br>
+    public long time = 0;<br>
+}<br>
+public class ClockReader {<br>
+    Clock clock = new Clock();<br>
+    public long readClock{<br>
+        return clock.time;<br>
+    }
+}
+]]>
+    </string>
+    <string name="code_core_3">
+<![CDATA[
+
+public final class String<br>
+    implements java.io.Serializable, Comparable<String>, CharSequence {<br>
+    /** The value is used for character storage. */<br>
+    private final char value[];<br><br>
+
+]]>
+    </string>
+    <string name="code_core_4">
+<![CDATA[
+class MainTest<br>
+{<br>
+    public static void main(String[] args)<br>
+    {<br>
+        for (String s : args)<br>
+            System.out.println(s);<br>
+    }
+}
+]]>
+    </string>
+    <string name="code_core_5">
+        <![CDATA[
+public abstract class Car {<br>
+
+   private String model;<br>
+   private String color;<br>
+   private int maxSpeed;<br>
+
+   public abstract void gas();<br>
+
+   public abstract void brake();<br>
+}
+
+]]>
+
+    </string>
+    <string name="code_core_6">
+          <![CDATA[
+
+public interface Messenger{<br>
+
+     public void sendMessage();<br>
+
+     public void getMessage();<br>
+}
+]]>
+    </string>
+    <string name="code_core_7">
+<![CDATA[<b> В данном вопросе отсутвует примера кода </b> ]]>
+    </string>
+    <string name="code_core_8">
+ <![CDATA[
+public class Vehicle {<br>
+
+  public static class Car {<br>
+     public int km;<br>
+  }
+}]]>
+    </string>
+    <string name="code_core_9">
+    <![CDATA[
+MonitoringSystem generalModule = new MonitoringSystem() {<br>
+
+@Override<br>
+   public void startMonitoring() {<br>
+       System.out.println("Мониторинг общих показателей стартовал!");<br>
+   }
+};]]>
+    </string>
+    <string name="code_core_10">
+     <![CDATA[
+public class PhoneNumberValidator {<br>
+
+   {
+       class PhoneNumber {<br>
+
+           private String phoneNumber;<br>
+
+           public PhoneNumber(String phoneNumber) {<br>
+               this.phoneNumber = phoneNumber;<br>
+           }
+       }
+
+   }
+
+   public void validatePhoneNumber(String phoneNumber) {<br>
+
+   }
+} ]]>
+    </string>
+
+</resources>
